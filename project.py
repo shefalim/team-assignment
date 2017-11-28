@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = 'javaisanart'
 
 # setup SQLAlchemy
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'datapage.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 db = SQLAlchemy(app)
 
 
@@ -18,7 +18,7 @@ def index():
 
 @app.route('/teaminfo')
 def members_page():
-    return render_template('teaminfo'.html')
+    return render_template('teaminfo.html')
 
 
 if __name__ == '__main__':

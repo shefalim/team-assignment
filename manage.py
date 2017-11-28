@@ -3,8 +3,9 @@ from project import app, db
 
 manager = Manager(app)
 
+
 @manager.command
-def depoly ():
+def deploy():
     db.drop_all()
     db.create_all()
     x = X()
@@ -12,5 +13,5 @@ def depoly ():
     db.session.commit()
 
 
-if __name__== '__main__':
+if __name__ == "__main__":
     manager.run()
